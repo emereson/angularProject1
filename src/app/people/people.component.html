@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+      <div class="col" *ngFor="let person of data">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ person.nom_per }}</h5>
+            <p class="card-text">{{ person.pat_per }}</p>
+            <!-- Agrega más propiedades según tus necesidades -->
+            <img src={{person.img_per}} alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
