@@ -1,14 +1,17 @@
-<div class="container">
-    <div class="row">
-      <div class="col" *ngFor="let person of data">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">{{ person.nom_per }}</h5>
-            <p class="card-text">{{ person.pat_per }}</p>
-            <!-- Agrega más propiedades según tus necesidades -->
-            <img src={{person.img_per}} alt="">
+<div class="container__people">
+  <h2>Todas Las Personas</h2>
+    <div class="for_people" >
+        <div class="card__container"  *ngFor="let person of data">
+          <div class="card_img" >
+            <img  [src]="person.img_per" alt="">
           </div>
+          <ul class="card_ul">
+            <li class="card__name" >{{ person.nom_per }}</li>
+            <li class="card__date" >Apellidos: {{ person.pat_per }} {{ person.mat_per }}</li>
+            <li class="card__date" >DNI: {{ person.nro_doc }}</li>
+            <li class="card__date" >Fecha de nacimiento: {{ person.fch_nac }}</li>
+          </ul>
         </div>
-      </div>
     </div>
-  </div>
+    <a class="link__register" routerLink="/register">Agregar Persona</a>
+</div>

@@ -1,0 +1,115 @@
+.addPerson__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+}
+
+.addPerson__container h1{
+    padding-top: 1em;
+    color: rgb(1, 87, 185);
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid rgb(1, 87, 185) ;
+}
+
+.addPerson__Form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+}
+
+.addForm__div{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    gap: 0.25em;
+}
+
+.addForm__div label {
+    color: rgb(43, 79, 126);
+}
+
+.addForm__div input {
+    border-radius: 0.5em;
+    height: 2.5em;
+    border: 2px solid  rgb(43, 79, 126);
+    background-color:  rgba(246, 250, 253, 0.329);
+    padding-left: 1em;
+}
+
+.addForm__img{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center; 
+}
+
+.addForm__img img {
+    width: 4em;
+    cursor: pointer;
+}
+
+.addForm__img button{
+    width: 10em;
+    padding: 0.5em;
+    background-color: rgb(12, 141, 216);
+    border: 2px solid  rgb(12, 141, 216);
+    color:white;
+    border-radius: 0.5em;
+    font-weight: 600;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.addForm__img button:hover{
+    background-color: white;
+    color: rgb(12, 141, 216);
+    transition: 0.5s;
+}
+
+.addForm__submit{
+    width:8em;
+    padding: 0.5em;
+    margin: auto;
+    background-color: rgb(1, 87, 185) ;
+    color: white;
+    border: 2px solid  rgb(1, 87, 185) ;
+    border-radius: 0.5em;
+    font-weight: 600;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.addForm__submit:hover{
+    background-color: white;
+    color: rgb(1, 87, 185) ;
+    transition: 0.5s;
+}
+
+.link__people{
+    width:8em;
+    padding: 0.5em;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(231, 22, 22) ;
+    color: white;
+    border: 2px solid   rgb(231, 22, 22) ;
+    border-radius: 0.5em;
+    font-weight: 600;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.link__people:hover{
+    background-color: white;
+    color: rgb(231, 22, 22) ;;
+    transition: 0.5s;
+}

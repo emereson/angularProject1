@@ -1,1 +1,48 @@
-<p>add-upd-person works!</p>
+<div class="addPerson__container">
+    <h1>Agregar Persona</h1>
+  <form class="addPerson__Form" [formGroup]="formPerson" (ngSubmit)="submit(formPerson.value)">
+    <div  class="addForm__div">
+      <label for="">Nombre :</label>
+      <input type="text" formControlName="nom_per" />
+    </div>
+    <div class="addForm__div">
+      <label for="">Apellido Paterno :</label>
+      <input type="text" formControlName="pat_per" />
+    </div>
+    <div class="addForm__div">
+      <label for="">Apellido materno :</label>
+      <input type="text" formControlName="mat_per" />
+    </div>
+    <div class="addForm__div">
+      <label for="">Numero de documento :</label>
+      <input type="number" formControlName="nro_doc" />
+    </div>
+    <div class="addForm__div">
+      <label for="">fecha de nacimiento :</label>
+      <input type="date" formControlName="fch_nac" />
+    </div>
+    <div class="addForm__div">
+      <input
+        type="file"
+        formControlName="img_per"
+        style="display: none"
+        #fileInput
+        (change)="onFileSelect(fileInput)"
+      />
+      <div class="addForm__img">
+        <img
+          src="../../../../assets/subirImg.jpg"
+          alt=""
+          (click)="fileInput.click()"
+          *ngIf="!selectedFile"
+        />
+        <button (click)="fileInput.click()" *ngIf="!selectedFile">
+          Subir Imagen
+        </button>
+      </div>
+    </div>
+
+    <button class="addForm__submit"  type="submit">Agregar</button>
+  </form>
+  <a class="link__people" routerLink="/">Inicio</a>
+</div>

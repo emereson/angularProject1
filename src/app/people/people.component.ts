@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewChild} from '@angular/core';
 import { PeopleService } from './people.service';
+import { ToastrService } from 'ngx-toastr';
+import { AddUpdPersonComponent } from './components/add-upd-person/add-upd-person.component';
 
 @Component({
   selector: 'app-people',
@@ -8,11 +10,14 @@ import { PeopleService } from './people.service';
 })
 export class PeopleComponent implements OnInit {
   data: any[] = [];
+  person_sel:any;
+  @ViewChild('AddUpdPersonComponent') addUpdPerson!:AddUpdPersonComponent;
 
-  constructor(private peopleService: PeopleService) {}
+  constructor(private peopleService: PeopleService,private toastr:ToastrService) {}
 
   ngOnInit(): void {
     this.llenarData();
+    this.toastr.success('Hello world!', 'Toastr fun!')
   }
 
   llenarData() {
@@ -20,5 +25,8 @@ export class PeopleComponent implements OnInit {
       this.data = data;
       console.log(this.data);
     });
+  }
+  Editar(p_data:any){
+    console.log(p_data);
   }
 }
